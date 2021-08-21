@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MOI
-    </title>
+    <title>MOI</title>
      <!-- 합쳐지고 최소화된 최신 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -24,16 +23,49 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-skyblue>
-<div>
-  <ul class="nav navbar-nav">
-    <li><img src="logo.png" ></li>
-    <li><a href="#">여행지 찾기</a></li>
-    <li><a href="#">숙소 찾기</a></li>
-    <li><a href="#">식당 찾기</a></li>
-  </ul>
+{% load static %}
+{% include "header.html" %}
+
+<div align="center" style="padding:100px 50px 20px 0px;">
+    <form>
+        <table align="center">
+            <tr>
+                <h2>여행지</h2>
+            </tr>
+
+            <tr>
+                <td width="300"> <input type="text" class="form-control" placeholder="여행지를 입력   "> </td>
+                <td><input type="submit" value="검색" class=btn btn-info></td>
+            </tr>
+        </table>
+    </form>
 </div>
-</nav>
+
+<div style="padding:0px 0px 50px 0px;">
+    <form align="center">
+        <table>
+            <tr>
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+            </tr>
+            <br>
+            <tr>
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+                <a href="search"><img src="{% static '예제사진.png' %}" width="300" height="400" style="padding:10px 10px 10px 10px;">
+            </tr>
+            <br>
+        </table>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

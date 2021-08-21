@@ -1,0 +1,28 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+<div style="padding-top:110px">
+    <form>
+        <table class="table table-striped">
+            <thead>
+                <th>수정 페이지</th>
+            </thead>
+            <tr>
+                <td>제목</td>
+                <td><input type="text" placeholder="제목을 입력하세요"></td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td><textarea cols="50" rows="20" style="resize: none;"></textarea></td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="수정" class="btn btn-info"></td>
+            </tr>
+</body>
+</html>

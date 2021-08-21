@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+     <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<style>
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{font-family: 'ONE-Mobile-POP';}
+</style>
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+<div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+    <div align="center">
+        <br><br><br><br><br><br>
+        <img src="{% static 'logo.png' %}" width="300" height="300"><br><br>
+    </div>
+        <form>
+            <input type="text" class="form-control" placeholder="USER ID">
+            <input type="password" class="form-control" placeholder="USER PASSWORD">
+            <input type="submit" value="Login" class="form-control">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

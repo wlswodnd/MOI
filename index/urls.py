@@ -3,4 +3,11 @@ from . import views
 
 urlpatterns = [
     path('index',views.index),
+    path('search',views.search),
+    path('login',views.login),
+    path('join',views.join),
+    path('게시판',views.게시판),
+    path('상세페이지',views.상세페이지),
+    path('수정',views.수정),
+    path('글쓰기',views.글쓰기),
 ]
