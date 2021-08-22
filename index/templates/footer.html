@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
 
+</head>
+<body >
+<div style="border-top : 1px solid black">
+
+{% load static %}
+    <div class="container" style="padding-top : 10px;">
+        <div class="col-lg-3" style="color: white">
+            <img src="{% static 'logo.png' %}" width="150px">
+        </div>
+
+        <div class="col-lg-5">
+            <table style="margin-top:30px; border-spacing : 10px; font-size : 18px">
+                <tr>
+                    <td width="100"> 고객센터 </td>
+                    <td width="100"> 010-4141-0458 </td>
+                </tr>
+                <tr>
+                    <td> 이메일 </td>
+                    <td> weer41031gmail.com </td>
+                </tr>
+                <tr>
+                    <td> 홈페이지 </td>
+                    <td> 제품 소개 </td>
+                </tr>
+                <tr>
+                    <td> 찾아오시는 길 </td>
+                    <td> 대표자 진재웅 </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-lg-4" style="color: white">
+            <table style="margin-top : 50px; border-spacing : 10px;">
+                <td style="padding:10px;"><img src="{% static '인스타그램1.png' %}" width="50px"></td>
+                <td style="padding:10px;"><img src="{% static '카카오톡.png' %}" width="50px"></td>
+                <td style="padding:10px;"><img src="{% static '트위터1.png' %}" width="50px"></td>
+                <td style="padding:10px;"><img src="{% static '페이스북.png' %}" width="50px"></td>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>
