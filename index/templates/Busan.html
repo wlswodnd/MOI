@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2"> 부산광역시 </th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '부산.jpg' %}" style="padding-right:50px;">인구 : 3,359,527명   면적 : 770.07㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">한반도 동남부에 자리한 광역자치단체. 인구는 3,389,388명으로 모든 광역시 중 외국인을 제외해도 유일한 300만명대 도시이다. 모든 광역자치단체를 다 합치면 경기도-서울특별시 다음 3위. 광역자치단체들 중 인구 밀도도 서울에 이어 2위이다.
+대한민국 제2의 도시이자 대한민국 최초의 직할시 · 광역시이고 국내 최대국제무역항이 있는 제1의 항구도시, 경상도 최대도시, 제1의 해양교통과 제2의 항공교통 김해국제공항 타이틀 등을 보유한 도시이기도 하다. 지역 내 문화 컨텐츠로는 대한민국 최대의 영화제인 부산국제영화제를 비롯해 G-STAR, 부산국제모터쇼, 부산불꽃축제, 부산항 불꽃축제, 부산 비엔날레, 부산 원아시아 페스티벌, 자갈치 축제, 부산 해맞이 축제등이 유명하다.</td>
+        </tr>
+    </table>
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

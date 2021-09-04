@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+</head>
+<body>
+{% load static %}
+{% include "header.html" %}
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2">제주도</th>
+        </thead>
+            <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '돌하르방.jpg' %}" style="padding-right:50px;"height="564" width="491">인구 : 674,635명   면적 : 1,850.2㎢  </td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">
+                대한민국의 남서쪽에 있는 섬. 행정구역상 광역자치단체인 제주특별자치도의 관할. 한국의 섬 중에서 가장 크고 인구가 많은 섬으로 면적은 1833.2㎢이다. 이는 대한민국 본토에서 가장 큰 기초자치단체인 홍천군(1,820.14㎢)보다 약간 크며, 제주도 다음 2번째 큰 섬인 거제도(379.5㎢)의 5배 정도 된다. 인구는 약 70만 명. 세계 섬 크기 218위이다.
+                관광지로는 한라산, 성산일출봉, 섭지코지,만장굴, 우도, 추자도, 국립제주박물관, 성읍민속마을, 휴애리 자연생활공원, 제주 올레 등 다양한 관광지가 있다.
+            </td>
+        </tr>
+    </table>
+</div>
+{% include "footer.html" %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

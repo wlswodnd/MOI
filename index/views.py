@@ -1,29 +1,22 @@
 from django.shortcuts import render
 
-
 def index(request):
     return render(request, 'index.html')
 
-# def login( request ) :
-#     return render( request, "login.html")
-#
-# def join( request ) :
-#     return render( request, "join.html")
+def Seoul( request ) :
+    return render( request, "Seoul.html")
 
-def information( request ) :
-    return render( request, "information.html")
+def Jeju( request ) :
+    return render( request, "Jeju.html")
 
-# def 게시판( request ) :
-#     return render( request, "게시판.html")
-#
-# def 상세페이지( request ) :
-#     return render( request, "상세페이지.html")
-#
-# def 수정( request ) :
-#     return render( request, "수정.html")
-#
-# def 글쓰기( request ) :
-#     return render( request, "글쓰기.html")
+def Busan( request ) :
+    return render( request, "Busan.html")
+
+def Jeonju( request ) :
+    return render( request, "Jeonju.html")
+
+def Gyeongju( request ) :
+    return render( request, "Gyeongju.html")
 
 def Introduce( request ) :
     return render( request, "Introduce.html")

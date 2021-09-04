@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2"> 서울특별시 </th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '서울.jpg' %}" style="padding-right:50px;">인구 : 9,558,153명   면적 : 605.2㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">서울특별시는 대한민국의 최대 도시이자 수도이며 대한민국의 최대의 관광지이기도 한다.</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">서울의 대표적인 관광지로는 조선의 궁궐 : 경복궁, 창덕궁, 창경궁, 덕수궁, 경희궁 남산골 한옥마을, 남산, 인사동, 명동, 북촌한옥마을, 롯데월드, 롯데월드타워, 63빌딩, 홍대거리, 이태원동, 신촌, 경리단길, 코엑스, 국립중앙박물관, 전쟁기념관, 서울역사박물관, 독립문, 서대문형무소 등 다양한 관광지가 있다</td>
+        </tr>
+    </table>
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

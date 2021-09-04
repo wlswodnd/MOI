@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2"> 전수시 </th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '전주.jpg' %}" style="padding-right:50px;">인구 : 657,578명   면적 : 206.04㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">전라북도 중앙부에 위치한 시. 전라북도청 소재지이자 전북 최대도시이다. 동북방향에서부터 동쪽과 남쪽을 완주군이 전부 감싸고, 서쪽으로는 김제시, 완주군, 서북방향으로 익산시가 접한다. 시 인구로 비수도권 기초자치단체 중에서 창원시, 청주시에 이어 3위. 대표적인 관광지로는 전주 한옥마을, 전주향교, 전동성당, 경기전, 풍남문, 자만벽화마을, 덕진공원, 청연루, 전주동물원, 한국도로공사 전주수목원 등이 있다.</td>
+    </table>
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>
