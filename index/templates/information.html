@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+</head>
+<body>
+{% load static %}
+{% include "header.html" %}
+
+<div style="padding:150px;font-size:30px;">
+    <form>
+        <table>
+            <td>
+                <tr style="margin:300px">출발일 <input type="date"></tr>
+                <tr style="margin:300px">도착일 <input type="date"></tr>
+            </td>
+
+            <td>
+                <tr style="margin:300px">자동차 <input type="checkbox" name="vehicle"></tr>
+                <tr style="margin:300px">대중교통 <input type="checkbox" name="vehicle"></tr>
+                <tr style="margin:300px">도보 <input type="checkbox" name="vehicle"></tr>
+            </td>
+        </table>
+    </form>
+</div>
+
+<div id="map" style="width:1900px;height:900px;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1068ecc07e84db6bdc9e611c189770d5"></script>
+<script>
+	var container = document.getElementById('map');
+	var options = {
+		center: new kakao.maps.LatLng(33.450701, 126.570667),
+		level: 3
+	};
+
+	var map = new kakao.maps.Map(container, options);
+</script>
+
+</body>
+</html>

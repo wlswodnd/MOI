@@ -3,6 +3,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
+def Introduce( request ) :
+    return render( request, "Introduce.html")
+
 def Seoul( request ) :
     return render( request, "Seoul.html")
 
@@ -18,5 +21,5 @@ def Jeonju( request ) :
 def Gyeongju( request ) :
     return render( request, "Gyeongju.html")
 
-def Introduce( request ) :
-    return render( request, "Introduce.html")
+def information( request ) :
+    return render( request, "information.html")
