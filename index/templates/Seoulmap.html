@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MOI</title>
+  <style>
+html, body {width:100%;height:100%;margin:0;padding:0;}
+.map_wrap {position:relative;overflow:hidden;width:100%;height:100%;}
+.radius_border{border:1px solid #919191;border-radius:5px;}
+.custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;}
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}
+.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}
+.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}
+</style>
+</head>
+<body>
+<div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+    <!-- 지도타입 컨트롤 div 입니다 -->
+    <div class="custom_typecontrol radius_border">
+        <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+        <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+    </div>
+    <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+    <div class="custom_zoomcontrol radius_border">
+        <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>
+        <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+    </div>
+</div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1068ecc07e84db6bdc9e611c189770d5"></script>
+<script>
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+function setMapType(maptype) {
+    var roadmapControl = document.getElementById('btnRoadmap');
+    var skyviewControl = document.getElementById('btnSkyview');
+    if (maptype === 'roadmap') {
+        map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
+        roadmapControl.className = 'selected_btn';
+        skyviewControl.className = 'btn';
+    } else {
+        map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
+        skyviewControl.className = 'selected_btn';
+        roadmapControl.className = 'btn';
+    }
+}
+
+// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomIn() {
+    map.setLevel(map.getLevel() - 1);
+}
+
+// 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomOut() {
+    map.setLevel(map.getLevel() + 1);
+}
+</script>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1068ecc07e84db6bdc9e611c189770d5"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+        center: new kakao.maps.LatLng(37.55159510582807, 126.98766274705164), // 지도의 중심좌표
+        level: 7 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
+var positions = [
+    {
+        content: '<div>경복궁</div>',
+        latlng: new kakao.maps.LatLng(37.57961654166303, 126.97704118358345)
+    },
+    {
+        content: '<div>창덕궁</div>',
+        latlng: new kakao.maps.LatLng(37.57942982284207, 126.99104167983602)
+    },
+    {
+        content: '<div>창경궁</div>',
+        latlng: new kakao.maps.LatLng(37.57876971695422, 126.99486937531971)
+    },
+    {
+        content: '<div>덕수궁</div>',
+        latlng: new kakao.maps.LatLng(37.56580452219398, 126.97514518773234)
+    },
+    {
+        content: '<div>경희궁</div>',
+        latlng: new kakao.maps.LatLng(37.571236725303514, 126.9681683277599)
+    },
+    {
+        content: '<div>남산골 한옥마을</div>',
+        latlng: new kakao.maps.LatLng(37.55931375300661, 126.99447690231298)
+    },
+    {
+        content: '<div>남산</div>',
+        latlng: new kakao.maps.LatLng(37.55375501309212, 126.98096807846733)
+    },
+    {
+        content: '<div>인사동</div>',
+        latlng: new kakao.maps.LatLng(37.573328252738, 126.98633661549)
+    },
+    {
+        content: '<div>명동</div>',
+        latlng: new kakao.maps.LatLng(37.55998, 126.9858296)
+    },
+    {
+        content: '<div>북촌한옥마을</div>',
+        latlng: new kakao.maps.LatLng(37.58239728921228, 126.98368846768965)
+    },
+    {
+        content: '<div>롯데월드</div>',
+        latlng: new kakao.maps.LatLng(37.511115012480744, 127.0981664799918)
+    },
+    {
+        content: '<div>롯데월드 타워</div>',
+        latlng: new kakao.maps.LatLng(37.51312631850747, 127.10196125813253)
+    },
+    {
+        content: '<div>63빌딩</div>',
+        latlng: new kakao.maps.LatLng(37.5193759986025, 126.9402102643189)
+    },
+    {
+        content: '<div>홍대거리</div>',
+        latlng: new kakao.maps.LatLng(37.555849326757624, 126.92414956000913)
+    },
+    {
+        content: '<div>이태원동</div>',
+        latlng: new kakao.maps.LatLng(37.534272313844, 126.97534763076)
+    },
+    {
+        content: '<div>신촌</div>',
+        latlng: new kakao.maps.LatLng(37.557632679051686, 126.93691601204252)
+    },
+    {
+        content: '<div>경리단길</div>',
+        latlng: new kakao.maps.LatLng(37.53974378632187, 126.99162667901042)
+    },
+    {
+        content: '<div>코엑스</div>',
+        latlng: new kakao.maps.LatLng(37.5116134,127.0586718)
+    },
+    {
+        content: '<div>국립중앙박물관</div>',
+        latlng: new kakao.maps.LatLng(37.5238548,126.9782815)
+    },
+    {
+        content: '<div>전쟁기념관</div>',
+        latlng: new kakao.maps.LatLng(37.5366101,126.974951)
+    },
+    {
+        content: '<div>서울역사박물관</div>',
+        latlng: new kakao.maps.LatLng(37.57047060236276, 126.97055653948297)
+    },
+    {
+        content: '<div>독립문</div>',
+        latlng: new kakao.maps.LatLng(37.57238852111341, 126.95953035998683)
+    },
+    {
+        content: '<div>서대문형무소</div>',
+        latlng: new kakao.maps.LatLng(37.57446470026692, 126.9563244921898)
+    },
+    {
+        content: '<div>은표의 집</div>',
+        latlng: new kakao.maps.LatLng(37.615084788565994, 126.83604628457128)
+    },
+    {
+        content: '<div>은표가 테어난 곳</div>',
+        latlng: new kakao.maps.LatLng(37.627221681435444, 126.82982792483384)
+    },
+    {
+        content: '<div>행신역(KTX)</div>',
+        latlng: new kakao.maps.LatLng(37.61208381293982, 126.83412010478963)
+    },
+    {
+        content: '<div>고양차량사업소</div>',
+        latlng: new kakao.maps.LatLng(37.61021081941647, 126.82241022997535)
+    },
+    {
+        content: '<div>수서차량기지(쵸퍼 볼 수 있는 곳)</div>',
+        latlng: new kakao.maps.LatLng(37.47798878313988, 127.1125692661286)
+    },
+    {
+        content: '<div>현재위치</div>',
+        latlng: new kakao.maps.LatLng(37.555736474290356, 126.9399546434475)
+    },
+    {
+        content: '<div>종각드리프트</div>',
+        latlng: new kakao.maps.LatLng(37.5700977854602, 126.97705805722613)
+    },
+    {
+        content: '<div></div>',
+        latlng: new kakao.maps.LatLng(37.64841557808608, 126.66522517074162)
+    },
+    {
+        content: '<div></div>',
+        latlng: new kakao.maps.LatLng(37.6231823093416, 126.70003097866206)
+    },
+];
+
+for (var i = 0; i < positions.length; i ++) {
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng // 마커의 위치
+    });
+
+    // 마커에 표시할 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content: positions[i].content // 인포윈도우에 표시할 내용
+    });
+
+    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+    // 이벤트 리스너로는 클로저를 만들어 등록합니다
+    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+}
+
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+
+/* 아래와 같이도 할 수 있습니다 */
+/*
+for (var i = 0; i < positions.length; i ++) {
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+map: map, // 마커를 표시할 지도
+position: positions[i].latlng // 마커의 위치
+    });
+
+    // 마커에 표시할 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content: positions[i].content // 인포윈도우에 표시할 내용
+    });
+
+    // 마커에 이벤트를 등록하는 함수 만들고 즉시 호출하여 클로저를 만듭니다
+    // 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    (function(marker, infowindow) {
+        // 마커에 mouseover 이벤트를 등록하고 마우스 오버 시 인포윈도우를 표시합니다
+        kakao.maps.event.addListener(marker, 'mouseover', function() {
+            infowindow.open(map, marker);
+        });
+
+        // 마커에 mouseout 이벤트를 등록하고 마우스 아웃 시 인포윈도우를 닫습니다
+        kakao.maps.event.addListener(marker, 'mouseout', function() {
+            infowindow.close();
+        });
+    })(marker, infowindow);
+}
+*/
+</script>
+
+</body>
+</html>

@@ -37,11 +37,6 @@ html, body {width:100%;height:100%;margin:0;padding:0;}
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1068ecc07e84db6bdc9e611c189770d5"></script>
 <script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-    mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
@@ -75,7 +70,7 @@ function zoomOut() {
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
-        center: new kakao.maps.LatLng(37.5511736,126.9860379), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(35.8445917946699, 129.2182934455886), // 지도의 중심좌표
         level: 7 // 지도의 확대 레벨
     };
 
@@ -84,140 +79,44 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
 var positions = [
     {
-        content: '<div>경복궁</div>',
-        latlng: new kakao.maps.LatLng(37.57961654166303, 126.97704118358345)
+        content: '<div>석굴암</div>',
+        latlng: new kakao.maps.LatLng(35.79485317559781, 129.34923562774543)
     },
     {
-        content: '<div>창덕궁</div>',
-        latlng: new kakao.maps.LatLng(37.57942982284207, 126.99104167983602)
+        content: '<div>불국사</div>',
+        latlng: new kakao.maps.LatLng(35.79015191484315, 129.33208484210564)
     },
     {
-        content: '<div>창경궁</div>',
-        latlng: new kakao.maps.LatLng(37.57876971695422, 126.99486937531971)
+        content: '<div>경주국립박물관</div>',
+        latlng: new kakao.maps.LatLng(35.82941052910664, 129.22789642347664)
     },
     {
-        content: '<div>덕수궁</div>',
-        latlng: new kakao.maps.LatLng(37.56580452219398, 126.97514518773234)
+        content: '<div>월정교</div>',
+        latlng: new kakao.maps.LatLng(35.82921959965305, 129.21802487287508)
     },
     {
-        content: '<div>경희궁</div>',
-        latlng: new kakao.maps.LatLng(37.571236725303514, 126.9681683277599)
+        content: '<div>첨성대</div>',
+        latlng: new kakao.maps.LatLng(35.83467625668471, 129.21906248949364)
     },
     {
-        content: '<div>남산골 한옥마을</div>',
-        latlng: new kakao.maps.LatLng(37.55931375300661, 126.99447690231298)
+        content: '<div>대릉원</div>',
+        latlng: new kakao.maps.LatLng(35.8373531550607, 129.21300729422842)
     },
     {
-        content: '<div>남산</div>',
-        latlng: new kakao.maps.LatLng(37.55375501309212, 126.98096807846733)
+        content: '<div>동궁과 월지</div>',
+        latlng: new kakao.maps.LatLng(35.83475663118155, 129.22656019806664)
     },
     {
-        content: '<div>인사동</div>',
-        latlng: new kakao.maps.LatLng(37.573328252738, 126.98633661549)
+        content: '<div>황리단길</div>',
+        latlng: new kakao.maps.LatLng(35.83765365363263, 129.20972209793695)
     },
     {
-        content: '<div>명동</div>',
-        latlng: new kakao.maps.LatLng(37.55998, 126.9858296)
+        content: '<div>경주 주상절리</div>',
+        latlng: new kakao.maps.LatLng(35.68615658823296, 129.47431503096115)
     },
     {
-        content: '<div>북촌한옥마을</div>',
-        latlng: new kakao.maps.LatLng(37.58239728921228, 126.98368846768965)
-    },
-    {
-        content: '<div>롯데월드</div>',
-        latlng: new kakao.maps.LatLng(37.511115012480744, 127.0981664799918)
-    },
-    {
-        content: '<div>롯데월드 타워</div>',
-        latlng: new kakao.maps.LatLng(37.51312631850747, 127.10196125813253)
-    },
-    {
-        content: '<div>63빌딩</div>',
-        latlng: new kakao.maps.LatLng(37.5193759986025, 126.9402102643189)
-    },
-    {
-        content: '<div>홍대거리</div>',
-        latlng: new kakao.maps.LatLng(37.555849326757624, 126.92414956000913)
-    },
-    {
-        content: '<div>이태원동</div>',
-        latlng: new kakao.maps.LatLng(37.534272313844, 126.97534763076)
-    },
-    {
-        content: '<div>신촌</div>',
-        latlng: new kakao.maps.LatLng(37.557632679051686, 126.93691601204252)
-    },
-    {
-        content: '<div>경리단길</div>',
-        latlng: new kakao.maps.LatLng(37.53974378632187, 126.99162667901042)
-    },
-    {
-        content: '<div>코엑스</div>',
-        latlng: new kakao.maps.LatLng(37.5116134,127.0586718)
-    },
-    {
-        content: '<div>국립중앙박물관</div>',
-        latlng: new kakao.maps.LatLng(37.5238548,126.9782815)
-    },
-    {
-        content: '<div>전쟁기념관</div>',
-        latlng: new kakao.maps.LatLng(37.5366101,126.974951)
-    },
-    {
-        content: '<div>서울역사박물관</div>',
-        latlng: new kakao.maps.LatLng(37.57047060236276, 126.97055653948297)
-    },
-    {
-        content: '<div>독립문</div>',
-        latlng: new kakao.maps.LatLng(37.57238852111341, 126.95953035998683)
-    },
-    {
-        content: '<div>서대문형무소</div>',
-        latlng: new kakao.maps.LatLng(37.57446470026692, 126.9563244921898)
-    },
-    {
-        content: '<div>한라산</div>',
-        latlng: new kakao.maps.LatLng(33.3620145779897, 126.53349334275572)
-    },
-    {
-        content: '<div>성산 일출봉</div>',
-        latlng: new kakao.maps.LatLng(33.45921984290164, 126.94100540407887)
-    },
-    {
-        content: '<div>섭지코지</div>',
-        latlng: new kakao.maps.LatLng(33.42391705429731, 126.93063211352299)
-    },
-    {
-        content: '<div>만장굴</div>',
-        latlng: new kakao.maps.LatLng(33.52848283465783, 126.77147997393172)
-    },
-    {
-        content: '<div>우도</div>',
-        latlng: new kakao.maps.LatLng(33.5042966430968, 126.95404882944023)
-    },
-    {
-        content: '<div>추자도</div>',
-        latlng: new kakao.maps.LatLng(33.94701201403433, 126.3200966140462)
-    },
-    {
-        content: '<div>국립제주박물관</div>',
-        latlng: new kakao.maps.LatLng(33.51346058521745, 126.54895631244034)
-    },
-    {
-        content: '<div>성읍민속마을</div>',
-        latlng: new kakao.maps.LatLng(33.38442119377136, 126.80038886988613)
-    },
-    {
-        content: '<div>휴애리 자연생활공원</div>',
-        latlng: new kakao.maps.LatLng(33.30875347546053, 126.63379101115112)
-    },
-    {
-        content: '<div>제주 올레</div>',
-        latlng: new kakao.maps.LatLng(33.477235319751095, 126.89595515971527)
-    },
-    {
-        content: '<div>천지연폭포</div>',
-        latlng: new kakao.maps.LatLng(33.24694342646917, 126.55441004110486)
+        content: '<div>경주 중앙시장</div>',
+        latlng: new kakao.maps.LatLng(35.84400998932251, 129.20639009806672)
     },
 ];
 

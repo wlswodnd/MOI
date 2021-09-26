@@ -9,5 +9,9 @@ urlpatterns = [
     path('Busan',views.Busan),
     path('Jeonju',views.Jeonju),
     path('Gyeongju', views.Gyeongju),
-    path('information', views.information),
+    path('Seoulmap', views.Seoulmap),
+    path('Jejumap', views.Jejumap),
+    path('Busanmap', views.Busanmap),
+    path('Gyeongjumap', views.Gyeongjumap),
+    path('Jeonjumap', views.Jeonjumap),
 ]
