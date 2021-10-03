@@ -21,17 +21,5 @@ def Jeonju( request ) :
 def Gyeongju( request ) :
     return render( request, "Gyeongju.html")
 
-def Seoulmap( request ) :
-    return render( request, "Seoulmap.html")
-
-def Jejumap( request ) :
-    return render( request, "Jejumap.html")
-
-def Busanmap( request ) :
-    return render( request, "Busanmap.html")
-
-def Gyeongjumap( request ) :
-    return render( request, "Gyeongjumap.html")
-
-def Jeonjumap( request ) :
-    return render( request, "Jeonjumap.html")
+def map( request ) :
+    return render( request, "map.html")
