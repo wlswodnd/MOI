@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2">대구광역시</th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '대구.jpg' %}" style="padding-right:50px;">인구 : 2,392,787명   면적 : 883.5㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">경상도의 중앙, 경상북도의 남쪽 중앙에 있는 광역자치단체. 대경권을 대표하는 대도시이자 대구권의 중심지이다. 대경권과 대구권은 서로 비슷하지만 미묘하게 다른 영역을 가리킨다. 대경권은 대구광역시와 경상북도를 합하여 일컫는 말이고, 대구권은 대구광역시 생활권을 의미한다 시 자체 인구로는 서울특별시, 부산광역시, 인천광역시에 이어 대한민국 4위, 도시권 전체 인구로는 수도권, 부산·울산권에 이어 대한민국 3위에 달한다</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">대구의 대표적인 관광지는 김광석 다시그리기길, 계산성당, 수성못, 83타워, 앞산공원, 팔공산, 동화사, 아양기찻길, 근대문화골목, 대구예술발전소/수창청춘맨숀 등 다양한 관광지가 있다</td>
+        </tr>
+    </table>
+
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

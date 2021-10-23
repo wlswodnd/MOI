@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2">강릉시</th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '강릉.jpg' %}" style="padding-right:50px;">인구 : 213,151명   면적 : 1,040.78㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">강원도 동부에 위치한 시. 원주시, 춘천시와 함께 강원도 3대 도시 중 하나이며 동해안에 접하는 강원도 영동 지방의 최대 거점 도시이다. 이에 강원도청의 출장소인 강원도 환동해본부가 위치해있기도 하다. 신라시대 때 이름은 명주 1955년부터 1995년까지 강릉시와 명주군으로 나뉘어 있었다. 동으로는 동해, 남으로는 강원도 동해시와 정선군, 서로는 강원도 평창군과 홍천군, 북으로는 강원도 양양군에 접한다.</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">강릉의 대표적인 관광지는 경포해수욕장, 오죽헌, 경포대, 모래시계 공원, 중앙전통시장, 허균 허난설헌 기념공원, 정동진 해변, 소돌아들 바워공원, 주문진 수산시장 등 다양한 관광지가 있다</td>
+        </tr>
+    </table>
+
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

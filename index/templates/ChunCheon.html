@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2"> 춘천시 </th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '춘천.jpg' %}" style="padding-right:50px;">인구 : 283,312명   면적 : 1,116.41㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">강원도 서북부에 위치한 도시. 예로부터 맥국의 2000년 고도로 여겨져 왔으며, 조선 5대 유수부 중 하나이고 강원도청을 포함, 여러 공공기관의 지역 본부이 소재한 강원도의 수부도시이며, 영서지방의 문화적 중심 도시이자 원주시, 강릉시와 함께 강원도 3대 도시 중 하나이다.</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">춘천의 대표적인 관광지로는 소양강 스카이워크, 남이섬, 강촌 김유정레일바이크, 청평사, 제이드가든 수목원, 김유정 문학촌, 애니메이션 박물관, 춘천 중도물레길, 공지천 유원지, 춘천 명동 닭갈비 골목 등 다양한 관광지가 있다</td>
+        </tr>
+    </table>
+
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOI</title>
+
+</head>
+<body>
+{% include "header.html" %}
+{% load static %}
+
+<div style="padding:100px;">
+    <table>
+        <thead>
+            <th style="font-size:35px;" colspan="2">광주광역시</th>
+        </thead>
+        <tr style="font-size:30px;">
+            <td style="padding:25px 0px 25px 0px"><img src="{% static '광주.jpg' %}" style="padding-right:50px;">인구 : 1,442,827명   면적 : 501.1㎢</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">전라남도 중북부에 있는 광역자치단체. 호남 최대도시이며 광주권의 수부도시이다. 전라남도에서 독립해 출범한 광역시로 전라남도에 둘러싸여 있으며 현재에도 빛가람혁신도시, 전남도발전연구원-광주시정연구원 통합 등 전라남도와 협력을 많이 하고 있다. 인구는 955만 서울특별시, 336만 부산광역시, 293만 인천광역시, 239만 대구광역시, 145만 대전광역시 다음인 여섯 번째로 많다.</td>
+        </tr>
+        <tr style="font-size:30px;" >
+            <td colspan="2">광주의 대표적인 관광지는 무등산국립공원, 광주 예술의 거리, 충장로, 광주호, 광주호 호수생태원, 무등산 주상절리대, 5·18 자유공원, 5·18 기념공원, 사직공원, 광주 충효동 왕버들 군 등 다양한 관광지가 있다</td>
+        </tr>
+    </table>
+
+</div>
+
+{% include "footer.html" %}
+</body>
+</html>
